@@ -6,13 +6,14 @@ class Automovil:
         self.color = color
         self._estado = 'en_reposo'
         self._motor = Motor(cilindros = 4)
+        self._asientos = Asientos(color='negro')
     
     def acelerar(self, tipo='despacio'):
         if tipo == 'rapida':
             self.motor.inyecta_gasolina(10)
         else:
             self.motor.inyecta_gasolina(3)
-            
+
         self._estado = 'en_movimiento'
 
 class Motor: 
@@ -24,3 +25,10 @@ class Motor:
         
         def inyecta_gasolina(self, cantidad):
             pass
+
+class Asientos:
+
+    def __init__(self, color, material='tela', estilo = 'confort')
+        self.color = color
+        self.material = material
+        self.estilo = estilo
