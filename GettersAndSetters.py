@@ -11,10 +11,9 @@ class CasillaVotacion:
         if reg in self._pais:
             self._region = reg
         else:
-            raise ValueError('La region {region} no es valida')
+            raise ValueError('La region no es valida')
 
 casilla = CasillaVotacion(123,['Bogota','Medellin'])
 print(casilla.region)
 casilla.region = 'China'
 print(casilla.region)
-raise ValueError('La region' + region + 'no es valida')
