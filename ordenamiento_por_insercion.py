@@ -7,6 +7,7 @@ def ordenamiento_por_insercion(lista):
         posicion_actual = i
         print(posicion_actual)
         print(valor_actual)
+        print(i)
 
         while posicion_actual > 0 and lista[posicion_actual - 1] > valor_actual:
             lista[posicion_actual] = lista[posicion_actual - 1]
